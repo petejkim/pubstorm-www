@@ -4,7 +4,7 @@ html
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge"
     title PubStorm: Powerful HTML5 web site and static web app publishing
-    meta name="keywords" content="template language"
+    link rel="stylesheet" href="/css/app.css"
 
   body
-    h1 hello world
+    script src="/js/app.js"

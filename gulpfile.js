@@ -25,8 +25,7 @@ var gulp = require('gulp'),
     path = require('path');
 
 var srcJS = 'src/js/app.js',
-    srcCSS = 'src/css/app.sass',
-    vendorJSPath = 'vendor/js';
+    srcCSS = 'src/css/app.sass';
 
 gulp.task('default', sequence('clean-dev', ['js-dev', 'lint-dev', 'css-dev', 'html-dev', 'slm-dev', 'images-dev']));
 
@@ -139,7 +138,7 @@ gulp.task('css-dev', function() {
 
   buildCSS(cssOptions);
 
-  gulp.watch(['src/css/**/*.sass', 'src/css/**/*.scss']).on('change', function() {
+  gulp.watch(['src/css/**/*.sass', 'src/css/**/*.scss', 'vendor/css/**/*.sass', 'vendor/css/**/*.scss' ]).on('change', function() {
     gutil.log('Building ' + chalk.cyan('CSS') + '...');
     buildCSS(cssOptions).on('end', function() {
       gutil.log('Built ' + chalk.cyan('CSS'));
@@ -207,7 +206,7 @@ function browserifyBundler(options) {
   var jsExtensions = ['.js', '.jsx', '.es6', '.json'];
   options = merge({
     extensions: jsExtensions,
-    paths: [path.dirname(srcJS), vendorJSPath],
+    paths: ['src/js', 'vendor/js'],
     cache: {},
     packageCache: {},
     noParse: ['jquery']
@@ -292,7 +291,8 @@ function buildCSS(options) {
   }
 
   css = css.pipe(sass({
-      outputStyle: options.compress ? 'compressed' : 'nested'
+      outputStyle: options.compress ? 'compressed' : 'nested',
+      includePaths: ['src/css', 'vendor/css']
     }).on('error', mapError))
     .pipe(autoprefixer());
 
