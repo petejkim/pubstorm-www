@@ -7,9 +7,7 @@
   "author": "Nitrous, Inc.",
   "repository": "https://github.com/pubstorm/pubstorm-www",
   "license": "Proprietary",
-  "dependencies": {
-    "jquery": "^2.2.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel": "^5.8.38",
     "babel-eslint": "^5.0.4",

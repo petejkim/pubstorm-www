@@ -7,6 +7,10 @@
     "babel",
     "no-empty-blocks"
   ],
+  "globals": {
+    "$": true,
+    "jQuery": true
+  },
   "extends": "eslint:recommended",
   "rules": {
     "no-console": 1,

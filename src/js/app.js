@@ -1,3 +1,3 @@
-import $ from 'jquery';
+import 'bootstrap.min';
 
 $(function() {});

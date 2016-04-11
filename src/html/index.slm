@@ -1,10 +1,161 @@
 doctype html
 html
   head
-    meta charset="utf-8"
-    meta http-equiv="X-UA-Compatible" content="IE=edge"
-    title PubStorm: Powerful HTML5 web site and static web app publishing
-    link rel="stylesheet" href="/css/app.css"
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
 
+    title PubStorm: Powerful HTML5 web site and static web app publishing
+    link rel='stylesheet' href='/css/app.css'
   body
-    script src="/js/app.js"
+    nav.navbar.navbar-default.navbar-static-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed type='button' data-toggle='collapse' data-target='#navbar-collapse' aria-expanded='false'
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand href='#'
+            . PubStorm
+            small Beta
+
+        #navbar-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a href='#' Pricing
+            li
+              a href='#' Help
+            li
+              a href='#' Community
+
+    main.jumbotron
+      .container
+        h1 Free HTML5 Web Publishing and Hosting for Developers
+        p Deploy unique HTML5 websites and static web applications to superfast global CDN within seconds from the command line.
+        .input-group.input-group-lg
+          input.form-control type='text' readonly=true value='npm install -g pubstorm'
+          span.input-group-btn
+            button.btn.btn-primary.btn-lg type='button' Get Started
+
+    section
+      .container
+        .row
+          .col-xs-12.col-sm-6.col-md-4
+            h3 Production Grade CDN
+            p Our CDN provides quick pageloads to visitors around the globe.
+          .col-xs-12.col-sm-6.col-md-4
+            h3 Infinitely Scalable
+            p Our cloud automatically scales to handle any amount of traffic.
+          .col-xs-12.col-sm-6.col-md-4
+            h3 Asset Optimization
+            p Your files are automatically processed for size and speed.
+
+          .clearfix.visible-md-block.visible-lg-block
+
+          .col-xs-12.col-sm-6.col-md-4
+            h3 Custom Domains
+            p Have a piece of the Internet with your own domain name.
+          .col-xs-12.col-sm-6.col-md-4
+            h3 Backups and Rollbacks
+            p Made a mistake? Undo it instantly before anyone notices.
+          .col-xs-12.col-sm-6.col-md-4
+            h3 Visitor Statistics
+            p Monitor and learn more about your website traffic.
+
+    section
+      .container
+        h2 Compatible with your favorite tools
+
+    section
+      .container
+        h2 Get Started
+
+        .step
+          h3 Install Node and npm
+          p
+            | Node.js comes with a great package manager called npm. Even though the PubStorm
+            |  command line tool isn&rsquo;t written in JavaScript, it is distributed as an npm
+            |  package to make it really easy for you to install and update the tool.
+          p
+            a href='https://nodejs.org/en/download/' Download and install a recent version of Node.js.
+
+        .step
+          h3 Install PubStorm npm package
+          p
+            | Open a command line session. It is called &ldquo;Command Prompt&rdquo; on Windows,
+            |  &ldquo;Terminal&rdquo; on OS X, and you should know what you are doing if you are
+            |  using a Linux or BSD based system.
+          p
+            . Run
+            code npm -g install pubstorm
+            |  to get PubStorm command line tool.
+
+        .step
+          h3 Create a PubStorm account
+          p
+            . Once the PubStorm command line tool is installed, you can access it by entering
+            code storm
+            |  in the command line. To publish a web site on PubStorm, you&rsquo;ll need a PubStorm account.
+          p
+            . To create a PubStorm account, run
+            code storm signup
+            |  and follow the instructions on the screen.
+
+        .step
+          h3 Initialize a PubStorm project
+          p In the command line, navigate to the root folder of your project.
+          p
+            . Run
+            code storm init
+            |  and follow the instructions on the screen. When asked for the &ldquo;Project Path&rdquo;,
+            |  enter the path to the folder that contains the assets (HTML, CSS, JS and other assets like
+            |  images) that you want to publish. If you are using  a static site generator, enter the path
+            |  to the folder that contains the build output. For example, if you are using Jekyll, the
+            .  project path is
+            code _site
+            | .
+
+        .step
+          h3 Publish your your project
+          p
+            . Once your assets are ready, run
+            code storm publish
+            |  to publish your project.
+          p
+            |  If you are using a static site generator, you have to build your project before publishing.
+            .  For example, if you are using Jekyll, run
+            code jekyll build
+            .  to ensure your site is built before running
+            code storm publish
+            | .
+
+        .step
+          h3 Add a custom domain
+          p
+            . After the publish command is finished, your site will be live on a
+            code .pubstorm.site
+            |  domain.
+          p
+            . To add a custom domain that you own, run
+            code storm domains add
+            |  and follow the instructions on the screen.
+
+          p
+            . For more information, please visit
+            a href='http://help.pubstorm.com' PubStorm Help
+            | .
+
+    footer
+      .container
+        h4 PubStorm
+        ul
+          li
+            a href='/terms-of-service' Terms of Service
+          li
+            a href='/privacy-policy' Privacy Policy
+          li &copy; 2016 PubStorm. All Rights Reserved.
+
+    script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"
+    script src='/js/app.js'
