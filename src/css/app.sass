@@ -1,1 +1,373 @@
 @import '_bootstrap'
+@import 'colors'
+
+body
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif
+  color: black
+
+a, .btn, input
+  transition: background-color .1s, color .1s, border-color .1s, box-shadow .1s
+
+  &:focus, &:active:focus
+    outline: none
+
+code, kbd, pre, samp
+  font-family: 'Anonymous Pro', Menlo, Monaco, Consolas, "Courier New", monospace
+
+header
+  background: $brandBlue url(/images/storm-clouds.jpg) no-repeat
+  background-size: cover
+
+  .navbar, .jumbotron h1, .jumbotron p
+    text-shadow: 0 1px 0 black
+
+  .navbar.navbar-default
+    background: none
+    margin-bottom: 0
+    border: none
+
+    a
+      color: white
+
+      &:focus
+        color: $brandYellow
+
+      &:hover
+        color: $brandYellow
+
+      &:active
+        color: darken($brandYellow, 5%)
+
+    .navbar-brand
+      font-weight: 700
+      color: $brandYellow
+
+      sup
+        font-weight: 200
+        font-size: 10px
+        text-transform: uppercase
+        top: -0.6em
+        left: -2px
+
+  .jumbotron
+    background: transparent
+    margin-bottom: 0
+    text-align: center
+    color: white
+
+    h1
+      font-weight: 700
+
+    .input-group
+      width: 290px
+      margin: 0 auto
+
+      input
+        background: white
+        color: black
+
+        &:focus
+          box-shadow: none
+
+    .get-started-btn.btn
+      margin-top: 36px
+      padding: 10px 24px
+      background: $brandYellow
+      font-weight: 600
+      color: black
+      box-shadow: 0 1px 0 black
+
+      &:focus
+        background: darken($brandYellow, 6%)
+        color: black
+
+      &:hover
+        background: darken($brandYellow, 6%)
+        color: black
+
+      &:active
+        background: darken($brandYellow, 10%)
+        color: black
+
+#tools
+  background: $brandYellow
+  padding: 48px 0
+  text-align: center
+
+  h2
+    margin: 0 0 16px 0
+
+  ul
+    display: inline-block
+    list-style: none
+    padding-left: 0
+    margin: 0
+
+  li
+    display: inline-block
+    height: 96px
+    background: url(/images/tools.png) no-repeat
+    background-size: 1170px 96px
+    background-position: 0 0
+    margin-top: 32px
+
+  .separator
+    display: block
+    height: 0
+    margin: 0
+
+  .html5
+    width: 68px
+
+  .js
+    width: 76px
+    background-position: -98px
+
+  .jekyll
+    width: 163px
+    background-position: -196px
+
+  .hexo
+    width: 69px
+    background-position: -385px
+
+  .middleman
+    width: 76px
+    background-position: -487px
+
+  .hugo
+    width: 70px
+    background-position: -595px
+
+  .ember
+    width: 92px
+    background-position: -693px
+
+  .react
+    width: 76px
+    background-position: -814px
+
+  .angular
+    width: 76px
+    background-position: -921px
+
+  .gulp
+    width: 42px
+    background-position: -1028px
+
+  .grunt
+    width: 67px
+    background-position: -1104px
+
+#demo
+  background: $brandBlue
+  color: white
+  padding: 48px 0
+
+  .window
+    vertical-align: top
+
+    .titlebar
+      position: relative
+      height: 25px
+      border-radius: 5px 5px 0 0
+      background: lighten($brandYellow, 20%)
+      background-image: linear-gradient(180deg, lighten($brandYellow, 25%), lighten($brandYellow, 20%))
+      box-shadow: inset 0 1px 0 lighten($brandYellow, 30%)
+      border-bottom: 1px solid $brandYellow
+
+      .control
+        display: inline-block
+        vertical-align: top
+        width: 11px
+        height: 11px
+        border-radius: 8px
+        background: $brandYellow
+        border: 1px solid darken($brandYellow, 12%)
+        margin-top: 7px
+        margin-left: 6px
+
+        &:first-of-type
+          margin-left: 10px
+
+    .window-body
+      background: #fdf6e3
+      border-radius: 0 0 5px 5px
+      padding: 5px 8px
+      height: 400px
+      box-shadow: 0 1px 0 black
+      font-size: 16px
+
+      code
+        padding: 0
+        background: none
+        color: #002b36
+
+        .blue
+          color: #268bd2
+
+        .cyan
+          color: #2aa198
+
+  .browser
+    .titlebar-btn
+      display: inline-block
+      vertical-align: top
+      margin-top: 4px
+      background: lighten($brandYellow, 45%)
+      color: #777
+      font-size: 11px
+      font-weight: 600
+      height: 18px
+      line-height: 18px
+      border-bottom: 1px solid $brandYellow
+      text-align: center
+      border-radius: 3px
+
+    .url-field
+      position: absolute
+
+    .left-nav-btn, .right-nav-btn
+      padding: 0 6px
+      font-size: 10px
+
+    .left-nav-btn
+      margin-left: 10px
+
+    .right-nav-btn
+      margin-left: 1px
+
+    .window-body
+      padding: 0
+      background: white url(/images/erins-blog.png) no-repeat
+      background-position: center center
+      background-size: 290px 400px
+
+#features
+  padding: 24px 0
+  background: $brandYellow
+
+  .feature
+    margin: 24px 0
+    text-align: center
+
+    i.fa
+      font-size: 64px
+      color: darken($brandYellow, 20%)
+      text-shadow: 0 -1px 0 darken($brandYellow, 28%)
+
+    h3
+      font-weight: 700
+
+footer
+  background: $brandYellow
+
+/* Extra small devices (phones, less than 768px) */
+header
+  .jumbotron
+    h1
+      font-size: 36px
+      margin: 24px 0
+
+    p
+      font-size: 20px
+      margin: 24px 0
+
+    .get-started-btn
+      margin-bottom: 24px
+
+#tools
+  li
+    margin: 16px 16px 0 16px
+
+#demo
+  .browser
+    .url-field
+      width: 160px
+      left: 50%
+      margin-left: -80px
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min)
+  header
+    .jumbotron
+      h1
+        font-size: 50px
+        margin: 36px 0
+
+      p
+        font-size: 22px
+        margin: 36px 0
+
+    .get-started-btn
+      margin-bottom: 36px
+
+  #tools
+    li
+      margin: 32px 24px 0 24px
+
+  #demo
+    .browser
+      .url-field
+        width: 250px
+        left: 50%
+        margin-left: -125px
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min)
+  header
+    .jumbotron
+      h1
+        font-size: 64px
+        margin: 48px 0
+
+      p
+        font-size: 24px
+        margin: 48px 0
+
+    .get-started-btn
+      margin-bottom: 48px
+
+  #tools
+    li
+      margin: 32px 36px 0 36px
+
+  #features
+    h3
+      font-size: 26px
+
+    p
+      font-size: 15px
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min)
+  header
+    .jumbotron
+      h1
+        font-size: 72px
+
+      p
+        font-size: 28px
+
+  #demo
+    .window
+      display: inline-block
+      1140px
+
+    .terminal
+      width: 546px
+      margin-right: 48px
+
+    .browser
+      width: 546px
+
+/* Hi-DPI displays */
+@media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi)
+  #tools
+    li
+      background-image: url(/images/tools@2x.png)
+
+  #demo
+    .browser
+      .window-body
+        background-image: url(/images/erins-blog@2x.png)
