@@ -25,11 +25,11 @@ html.home
 
           #navbar-collapse.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
-              li
+              /li
                 a href='#' Pricing
               li
-                a href='#' Help
-              li
+                a href='http://help.pubstorm.com' Help
+              /li
                 a href='#' Community
 
       main.jumbotron
@@ -267,9 +267,9 @@ html.home
         h4 PubStorm
         ul
           li &copy; 2016 PubStorm. All Rights Reserved.
-          li
+          /li
             a href='/terms-of-service' Terms of Service
-          li
+          /li
             a href='/privacy-policy' Privacy Policy
 
     script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"
