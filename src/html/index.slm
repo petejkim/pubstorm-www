@@ -1,5 +1,5 @@
 doctype html
-html
+html.home
   head
     meta charset='utf-8'
     meta http-equiv='X-UA-Compatible' content='IE=edge'
@@ -90,42 +90,55 @@ html
             .control
           .window-body
             code
-              | > storm publish
-              br
-              | Scanning "/Users/erin/erins-blog"...
-              br
-              span.blue
-                | [Info]
-              |  Bundling 37 files (17.3 MiB)...
-              br
-              br
-              | Packing bundle "erins-blog"...
-              br
-              | [
-              span.blue
-                | ========================================
-              . ]
-              span.cyan 100.0%
-              br
-              br
-              | Uploading bundle "erins-blog" to PubStorm Cloud...
-              br
-              | [
-              span.blue
-                | ========================================
-              . ]
-              span.cyan 100.0%
-              br
-              br
-              | Launching...
-              br
-              span.blue
-                . [Info]
-                ins https://erins-blog.pubstorm.site/
-                |  published on PubStorm Cloud.
-              br
-              br
-              | >
+              span.cli
+                span.t1
+                  . >
+                span.t2 storm publish
+                span.t3
+                  br
+                  | Scanning "/Users/erin/erins-blog"...
+                span.t4
+                  br
+                  span.blue
+                    | [Info]
+                  |  Bundling 37 files (17.3 MiB)...
+                span.t5
+                  br
+                  br
+                  | Packing bundle "erins-blog"...
+                  br
+                  | [
+                  span.blue.cli-progress-bar
+                    | ========================================
+                  . ]
+                  span.cyan
+                    span.cli-progress-percentage 100.0
+                    | %
+                span.t6
+                  br
+                  br
+                  | Uploading bundle "erins-blog" to PubStorm Cloud...
+                  br
+                  | [
+                  span.blue.cli-progress-bar
+                    | ========================================
+                  . ]
+                  span.cyan
+                    span.cli-progress-percentage 100.0
+                    | %
+                span.t7
+                  br
+                  br
+                  | Launching...
+                span.t8
+                  br
+                  span.blue
+                    . [Info]
+                    ins https://erins-blog.pubstorm.site/
+                    |  published on PubStorm Cloud.
+                  br
+                  | >
+              span.cursor
 
         .browser.window
           .titlebar
@@ -136,9 +149,10 @@ html
               i.fa.fa-chevron-left
             .right-nav-btn.titlebar-btn.hidden-xs
               i.fa.fa-chevron-right
-            .url-field.titlebar-btn erins-blog.pubstorm.site
+            .url-field.titlebar-btn
+              span erins-blog.pubstorm.site
           .window-body
-            .erins-blog
+            .blog
 
     section#tools
       .container

@@ -201,21 +201,32 @@ header
       background: #fdf6e3
       border-radius: 0 0 5px 5px
       padding: 5px 8px
-      height: 400px
       box-shadow: 0 1px 0 black
       font-size: 16px
 
-      code
-        padding: 0
-        background: none
-        color: #002b36
-        border: none
+  .terminal
+    .window-body
+      overflow: hidden
 
-        .blue
-          color: #268bd2
+    code
+      padding: 0
+      background: none
+      color: #002b36
+      border: none
 
-        .cyan
-          color: #2aa198
+      .blue
+        color: #268bd2
+
+      .cyan
+        color: #2aa198
+
+    .cursor
+      animation: cursor-blink 1.2s infinite
+
+      &:before
+        content: '|'
+        color: transparent
+        background: #586e75
 
   .browser
     .titlebar-btn
@@ -248,9 +259,16 @@ header
 
     .window-body
       padding: 0
+      height: 400px
+      background: white
+
+    .blog
       background: white url(/images/erins-blog.png) no-repeat
       background-position: center center
       background-size: 290px 400px
+      width: 290px
+      height: 100%
+      margin: 0 auto
 
 #features
   padding: 24px 0
@@ -380,8 +398,9 @@ footer
       margin-bottom: 15px
 
       .window-body
+        min-height: 320px
         line-height: 1.3
-        height: auto
+        font-size: 13px
 
     .browser
       .url-field
@@ -438,6 +457,7 @@ footer
       margin-right: 24px
 
       .window-body
+        height: 400px
         line-height: 1.3
 
     .browser
@@ -517,5 +537,19 @@ footer
 
   #demo
     .browser
-      .window-body
+      .blog
         background-image: url(/images/erins-blog@2x.png)
+
+/* animations */
+
+@keyframes cursor-blink
+  0%
+    opacity: 0
+  6%
+    opacity: 1
+
+  50%
+    opacity: 1
+
+  100%
+    opacity: 0

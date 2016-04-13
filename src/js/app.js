@@ -1,28 +1,13 @@
 import 'bootstrap.min';
+import home from './home';
 
-$('.npm-cmd').click(function() {
-  $(this).select();
-});
+const pages = {
+  home
+};
 
-$('.copy-npm-cmd-btn').click(function(e) {
-  e.preventDefault();
-  $('.npm-cmd').select();
-  document.execCommand('copy');
-}).tooltip({
-  container: 'body',
-  trigger: 'hover'
-});
-
-$('.get-started-btn').click(function() {
-  location.hash = '';
-  $('html, body').animate({
-    scrollTop: $('#get-started').offset().top
-  }, {
-    duration: 300,
-    complete() {
-      location.hash = 'get-started';
-    }
-  });
-}).tooltip({
-  trigger: 'hover'
+$('html').attr('class').split(' ').forEach(function(pageClass) {
+  const fn = pages[pageClass];
+  if (typeof fn === 'function') {
+    fn();
+  }
 });
