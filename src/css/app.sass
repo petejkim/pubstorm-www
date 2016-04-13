@@ -1,8 +1,8 @@
 @import '_bootstrap'
-@import 'colors'
+@import 'variables'
 
 body
-  font-family: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: $mainFont
   color: black
 
 a, .btn, input
@@ -12,7 +12,7 @@ a, .btn, input
     outline: none
 
 code, kbd, pre, samp
-  font-family: 'Anonymous Pro', Menlo, Monaco, Consolas, "Courier New", monospace
+  font-family: $codeFont
 
 code
   background: #f0f0f0
@@ -69,12 +69,14 @@ header
       width: 290px
       margin: 0 auto
 
-      input
-        background: white
-        color: black
+    .npm-cmd
+      background: #fdf6e3
+      color: #002b36
+      font-weight: 600
+      line-height: 46px
 
-        &:focus
-          box-shadow: none
+      &:focus
+        box-shadow: none
 
     .get-started-btn.btn
       margin-top: 36px
