@@ -205,8 +205,10 @@ html.home
               |  using a Linux or BSD based system.
             p
               . Run
-              code npm -g install pubstorm
-              |  to get PubStorm command line tool.
+              code npm install -g pubstorm
+              .  to get PubStorm command line tool. Try running
+              code sudo npm install -g pubstorm
+              .  if you get a permission error.
 
           li
             h3 Create a PubStorm account
