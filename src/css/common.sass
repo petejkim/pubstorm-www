@@ -1,0 +1,88 @@
+body
+  font-family: $mainFont
+  color: black
+
+a, .btn, input
+  transition: background-color .1s, color .1s, border-color .1s, box-shadow .1s
+
+  &:focus, &:active:focus
+    outline: none
+
+code, kbd, pre, samp
+  font-family: $codeFont
+
+code
+  background: #f0f0f0
+  color: black
+  border-bottom: 1px solid #e0e0e0
+  margin: 0 1px
+
+header
+  background: $brandBlue no-repeat
+
+  .navbar
+    text-shadow: 0 1px 0 black
+
+  .navbar.navbar-default
+    background: none
+    margin-bottom: 0
+    border: none
+
+    a
+      color: white
+
+      &:focus
+        color: $brandYellow
+
+      &:hover
+        color: $brandYellow
+
+      &:active
+        color: darken($brandYellow, 5%)
+
+    .navbar-brand
+      font-size: 20px
+      font-weight: 700
+      color: $brandYellow
+
+      sup
+        font-weight: 200
+        font-size: 10px
+        text-transform: uppercase
+        top: -7px
+        left: -3px
+
+footer
+  background: $brandBlue
+  color: white
+  padding-bottom: 48px
+  text-align: center
+
+  h4
+    color: $brandYellow
+    text-shadow: 0 1px 0 black
+    font-weight: 700
+    font-size: 20px
+    margin: 0 0 16px 0
+
+  ul
+    display: block
+    list-style: none
+    padding: 0
+    margin: 0
+
+  li
+    display: inline-block
+    margin: 0 8px
+
+  a
+    color: $brandYellow
+
+    &:focus
+      color: $brandYellow
+
+    &:hover
+      color: darken($brandYellow, 5%)
+
+    &:active
+      color: darken($brandYellow, 10%)
