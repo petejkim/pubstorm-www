@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     envify = require('gulp-envify'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
-    slm = require('gulp-slm'),
+    jade = require('gulp-jade'),
     sourcemaps = require('gulp-sourcemaps'),
     shell = require('gulp-shell'),
     gutil = require('gulp-util'),
@@ -27,9 +27,9 @@ var gulp = require('gulp'),
 var srcJS = 'src/js/app.js',
     srcCSS = 'src/css/app.sass';
 
-gulp.task('default', sequence('clean-dev', ['js-dev', 'lint-dev', 'css-dev', 'html-dev', 'slm-dev', 'images-dev']));
+gulp.task('default', sequence('clean-dev', ['js-dev', 'lint-dev', 'css-dev', 'html-dev', 'jade-dev', 'images-dev']));
 
-gulp.task('dist', sequence('clean-dist', ['images-dist', 'js-dist', 'css-dist', 'html-dist', 'slm-dist']));
+gulp.task('dist', sequence('clean-dist', ['images-dist', 'js-dist', 'css-dist', 'html-dist', 'jade-dist']));
 
 gulp.task('lint', function() {
   return lintJS();
@@ -63,14 +63,14 @@ gulp.task('html-dev', function() {
   });
 });
 
-gulp.task('slm-dev', function() {
+gulp.task('jade-dev', function() {
   var dest = 'build/dev';
 
-  buildSlm(dest);
-  gulp.watch('src/html/**/*.slm').on('change', function() {
-    gutil.log('Building ' + chalk.cyan('Slm') + '...');
-    buildSlm(dest).on('end', function() {
-      gutil.log('Built ' + chalk.cyan('Slm'));
+  buildJade(dest);
+  gulp.watch('src/html/**/*.jade').on('change', function() {
+    gutil.log('Building ' + chalk.cyan('Jade') + '...');
+    buildJade(dest).on('end', function() {
+      gutil.log('Built ' + chalk.cyan('Jade'));
     });
   });
 });
@@ -151,9 +151,9 @@ gulp.task('html-dist', function() {
   return copyHTML(dest);
 });
 
-gulp.task('slm-dist', function() {
+gulp.task('jade-dist', function() {
   var dest = 'build/dist';
-  return buildSlm(dest);
+  return buildJade(dest);
 });
 
 gulp.task('images-dist', function() {
@@ -269,11 +269,12 @@ function buildJS(options) {
   return js;
 }
 
-function buildSlm(dest) {
+function buildJade(dest) {
   dest = dest || "build/dev";
 
-  return gulp.src('./src/html/**/*.slm')
-    .pipe(slm())
+  return gulp.src('./src/html/**/*.jade')
+    .pipe(jade())
+    .on('error', mapError)
     .pipe(gulp.dest(dest));
 }
 
