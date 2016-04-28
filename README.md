@@ -23,10 +23,10 @@ npm install
 export PATH="node_modules/.bin:$PATH"
 ```
 
-4. Install `slm` highlighters:
-  * Atom: <https://github.com/slm-lang/language-slm>
-  * Sublime: <https://github.com/slm-lang/sublime-slm>
-  * Vim: <https://github.com/slm-lang/vim-slm>
+4. Install `Jade/Pug` highlighters:
+  * Atom: <https://atom.io/packages/language-jade>
+  * Sublime: <https://packagecontrol.io/packages/Jade>
+  * Vim: <https://github.com/digitaltoad/vim-pug>
 
 5. To develop, run `gulp` to start watching the `src` folder and run `python -m SimpleHTTPServer` in `build/dev` to serve the assets. Forward port 8000 using SSH or Nitrogen.
 
