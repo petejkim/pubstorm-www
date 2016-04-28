@@ -51,33 +51,21 @@ block body
   section#features
     .container
       .row
-        .feature.col-xs-12.col-sm-6.col-md-4
-          i.fa.fa-globe
-          h3 Production Grade CDN
-          p Our CDN provides quick pageloads to visitors around the globe.
-        .feature.col-xs-12.col-sm-6.col-md-4
-          i.fa.fa-tachometer
-          h3 Infinitely Scalable
-          p Our cloud automatically scales to handle any amount of traffic.
-        .feature.col-xs-12.col-sm-6.col-md-4
-          i.fa.fa-file-archive-o
-          h3 Asset Optimization
-          p Your files are automatically processed for size and speed.
+        mixin feature(icon, title, desc)
+          .feature.col-xs-12.col-sm-6.col-md-4
+            i.fa(class='fa-'+icon)
+            h3=title
+            p=desc
+
+        +feature('globe', 'Production Grade CDN', 'Our CDN provides quick pageloads to visitors around the globe.')
+        +feature('tachometer', 'Infinitely Scalable', 'Our cloud automatically scales to handle any amount of traffic.')
+        +feature('file-archive-o', 'Asset Optimization', 'Your files are automatically processed for size and speed.')
 
         .clearfix.visible-md-block.visible-lg-block
 
-        .feature.col-xs-12.col-sm-6.col-md-4
-          i.fa.fa-map-signs
-          h3 Custom Domains
-          p Have a piece of the Internet with your own domain name.
-        .feature.col-xs-12.col-sm-6.col-md-4
-          i.fa.fa-undo
-          h3 Backups and Rollbacks
-          p Made a mistake? Undo it instantly before anyone notices.
-        .feature.col-xs-12.col-sm-6.col-md-4
-          i.fa.fa-bar-chart
-          h3 Visitor Statistics
-          p Monitor and learn more about your website traffic.
+        +feature('map-signs', 'Custom Domains', 'Have a piece of the Internet with your own domain name.')
+        +feature('undo', 'Backups and Rollbacks', 'Made a mistake? Undo it instantly before anyone notices.')
+        +feature('bar-chart', 'Visitor Statistics', 'Monitor and learn more about your website traffic.')
 
   section#demo
     .container
@@ -161,29 +149,22 @@ block body
       h2 Works with all the tools you love
 
       ul
-        li.html5
-          span.sr-only HTML5
-        li.js
-          span.sr-only JavaScript
-        li.jekyll
-          span.sr-only Jekyll
-        li.hexo
-          span.sr-only Hexo
-        li.middleman
-          span.sr-only Middleman
+        mixin tool(slug, name)
+          li(class=slug)
+            span.sr-only= name
+
+        +tool('html5', 'HTML5')
+        +tool('js', 'JavaScript')
+        +tool('jekyll', 'Jekyll')
+        +tool('hexo', 'Hexo')
+        +tool('middleman', 'Middleman')
         li.separator.hidden-xs
-        li.hugo
-          span.sr-only Hugo
-        li.ember
-          span.sr-only Ember
-        li.react
-          span.sr-only React
-        li.angular
-          span.sr-only Angular
-        li.gulp
-          span.sr-only Gulp
-        li.grunt
-          span.sr-only Grunt
+        +tool('hugo', 'Hugo')
+        +tool('ember', 'Ember')
+        +tool('react', 'React')
+        +tool('angular', 'Angular')
+        +tool('gulp', 'Gulp')
+        +tool('grunt', 'Grunt')
 
   section#get-started
     .container
