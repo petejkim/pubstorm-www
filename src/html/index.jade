@@ -78,7 +78,7 @@ block body
           code
             span.cli
               span.t1
-                | >
+                span.prompt >
                 =' '
               span.t2 storm publish
               span.t3
@@ -118,16 +118,18 @@ block body
               span.t7
                 br
                 br
-                | Launching...
+                | Launching v1...
               span.t8
                 br
                 span.blue
                   | [Info]
-                  =' '
-                  ins https://erins-blog.pubstorm.site/
-                  |  published on PubStorm Cloud.
+                |  Successfully published "erins-blog" on PubStorm Cloud.
                 br
-                | >
+                | =>
+                = ' '
+                ins erins-blog.pubstorm.site
+                br
+                span.prompt >
                 =' '
             span.cursor
       .browser.window
