@@ -22,6 +22,7 @@ header
 
   .navbar
     text-shadow: 0 1px 0 black
+    padding: 15px 0
 
   .navbar.navbar-default
     background: none
@@ -41,9 +42,12 @@ header
         color: darken($brandYellow, 5%)
 
     .navbar-brand
-      font-size: 20px
+      font-size: 22px
       font-weight: 700
       color: $brandYellow
+      background: url(/images/logo.png) 15px center no-repeat
+      background-size: 41px 49px
+      padding-left: 66px
 
       sup
         font-weight: 200
@@ -51,6 +55,24 @@ header
         text-transform: uppercase
         top: -7px
         left: -3px
+
+    .navbar-collapse, .navbar-form
+      border: none
+      box-shadow: none
+
+    .navbar-toggle
+      border: none
+
+      &:hover, &:focus
+        background-color: transparent
+
+      .icon-bar
+        background: $brandYellow
+        transition: background-color .1s
+
+      &.collapsed
+        .icon-bar
+          background: white
 
 footer
   background: $brandBlue
@@ -86,3 +108,10 @@ footer
 
     &:active
       color: darken($brandYellow, 10%)
+
+/* Hi-DPI displays */
+@media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi)
+  header
+    .navbar.navbar-default
+      .navbar-brand
+        background-image: url(/images/logo@2x.png)
