@@ -1,0 +1,82 @@
+html.pricing
+  #pricing
+    padding: 48px 0
+
+    h2
+      color: white
+      text-align: center
+      margin: 0 0 48px 0
+
+    .pricing-table
+      background: $brandYellow
+      color: black
+      box-shadow: 0 1px 0 black
+      padding: 0
+
+      h3
+        border-bottom: 1px solid darken($brandYellow, 10%)
+        border-right: 1px solid darken($brandYellow, 10%)
+        margin: 0
+        padding: 16px 0
+        text-align: center
+        font-weight: bold
+
+      .body
+        text-align: center
+
+        h4
+          border-right: 1px solid darken($brandYellow, 10%)
+          margin: 0
+          padding: 16px 0
+          text-align: center
+          color: $brandBlue
+          font-weight: 600
+
+          span
+            color: black
+            font-weight: normal
+
+          .label
+            text-transform: uppercase
+            font-size: 11px
+            color: white
+            vertical-align: 2px
+
+        ul
+          border-right: 1px solid #ccc
+          margin: 0
+          list-style: none
+          padding: 0
+
+        li
+          padding: 10px
+          font-size: 16px
+          background: white
+
+          &:nth-of-type(even)
+            background: #f6f6f6
+
+          em
+            color: $brandBlue
+            font-style: normal
+            font-weight: 600
+
+      &:last-of-type
+        h3, ul, h4
+          border-right: none
+
+  /* Extra small devices (phones, less than 768px) */
+  @media (max-width: $screen-xs-max)
+    #pricing
+      .pricing-table
+        margin-bottom: 16px
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: $screen-sm-min)
+    #pricing
+      .pricing-table
+        &:first-of-type
+          border-radius: 5px 0 0 5px
+
+        &:last-of-type
+          border-radius: 0 5px 5px 0

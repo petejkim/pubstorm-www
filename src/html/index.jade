@@ -3,50 +3,28 @@ extends _layouts/default
 block vars
   - var _htmlClass='home'
 
+block header_body
+  main.jumbotron
+    .container
+      h1
+        | Free HTML5 Web Publishing
+        br.hidden-xs
+        |  and Hosting for Developers
+      p
+        | Deploy unique HTML5 websites and static web applications to
+        br.hidden-xs
+        |  a superfast global CDN with custom domains within seconds.
+      .input-group.input-group-lg
+        span.input-group-btn
+          button.copy-npm-cmd-btn.btn.btn-default.btn-lg(type='button' data-toggle='tooltip' data-placement='bottom' title='Copy to clipboard')
+            i.fa.fa-clipboard
+        input.form-control.npm-cmd(type='text' readonly=true value='npm install -g pubstorm')
+
+      button.get-started-btn.btn.btn-lg(type='button' data-toggle='tooltip' data-placement='bottom' title="It's Free!")
+        | Get Started
+
 block body
-  header
-    .nav.navbar.navbar-default.navbar-static-top
-      .container
-        .navbar-header
-          button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-collapse' aria-expanded='false')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='#')
-            | PubStorm
-            =' '
-            sup Beta
-
-        #navbar-collapse.collapse.navbar-collapse
-          ul.nav.navbar-nav.navbar-right
-            //-
-              li
-                a(href='#') Pricing
-            li
-              a(href='http://help.pubstorm.com') Help
-            //-
-              li
-                a(href='#') Community
-
-    main.jumbotron
-      .container
-        h1
-          | Free HTML5 Web Publishing
-          br.hidden-xs
-          |  and Hosting for Developers
-        p
-          | Deploy unique HTML5 websites and static web applications to
-          br.hidden-xs
-          |  a superfast global CDN with custom domains within seconds.
-        .input-group.input-group-lg
-          span.input-group-btn
-            button.copy-npm-cmd-btn.btn.btn-default.btn-lg(type='button' data-toggle='tooltip' data-placement='bottom' title='Copy to clipboard')
-              i.fa.fa-clipboard
-          input.form-control.npm-cmd(type='text' readonly=true value='npm install -g pubstorm')
-
-        button.get-started-btn.btn.btn-lg(type='button' data-toggle='tooltip' data-placement='bottom' title="It's Free!")
-          | Get Started
+  include _partials/header
 
   section#features
     .container
@@ -262,11 +240,6 @@ block body
             | .
 
   include _partials/footer
-
-  script(src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous")
-  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
-  script(src='/js/app.js')
-  include _partials/ga
-  include _partials/intercom
+  include _partials/app_js
 
 // Storm clouds photo by Carl Wycoff

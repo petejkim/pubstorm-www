@@ -1,0 +1,89 @@
+extends _layouts/default
+
+block vars
+  - var _htmlClass='pricing'
+
+block body
+  include _partials/header
+
+  section#pricing
+    .container
+      h2 Pricing
+      .row
+
+        .pricing-table.col-sm-offset-1.col-sm-5.col-md-offset-2.col-md-4
+          h3 Free
+          .body
+            ul
+              li
+                | Up to
+                em  2 Previous Versions
+              li
+                em Unlimited
+                |  Publishing
+              li
+                em Production-Grade
+                |  CDN
+              li
+                em Custom
+                |  Domains
+              li
+                em Custom
+                |  SSL Certs
+              li.hidden-xs &nbsp;
+              li.hidden-xs &nbsp;
+              li.hidden-xs &nbsp;
+              li.hidden-xs &nbsp;
+              li.hidden-xs &nbsp;
+              li.hidden-xs &nbsp;
+            h4
+              | Free Forever
+              =' '
+              span for up to 10 sites
+
+        .pricing-table.col-sm-5.col-md-4
+          h3 Premium
+          .body
+            ul
+              li
+                | Up to
+                em  20 Previous Versions
+              li
+                em Unlimited
+                |  Publishing
+              li
+                em Production-Grade
+                |  CDN
+              li
+                em Custom
+                |  Domains
+              li
+                em Custom
+                |  SSL Certs
+              li
+                em CORS
+                |  Support
+              li
+                em Password
+                |  Protection
+              li
+                em API
+                |  Proxy
+              li
+                | Visitor
+                em  Statistics
+              li
+                | Asset
+                em  Optimization
+              li
+                em Guaranteed
+                |  Uptime
+            h4
+              | $ TBD/mo.
+              =' '
+              span per site
+              =' '
+              span.label.label-primary Coming Soon
+
+  include _partials/footer
+  include _partials/app_js
