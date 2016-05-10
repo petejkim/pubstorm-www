@@ -3,6 +3,9 @@ extends _layouts/default
 block vars
   - var _htmlClass='pricing'
 
+block title
+  | Pricing &middot; PubStorm
+
 block body
   include _partials/header
 
@@ -10,7 +13,6 @@ block body
     .container
       h2 Pricing
       .row
-
         .pricing-table.col-sm-offset-1.col-sm-5.col-md-offset-2.col-md-4
           h3 Free
           .body
