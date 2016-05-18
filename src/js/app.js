@@ -1,8 +1,10 @@
 import 'bootstrap.min';
 import home from './home';
+import signup from './signup';
 
 const pages = {
-  home
+  home,
+  signup
 };
 
 $('html').attr('class').split(' ').forEach(function(pageClass) {

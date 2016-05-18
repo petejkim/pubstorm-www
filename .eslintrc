@@ -5,13 +5,19 @@
   },
   "plugins": [
     "babel",
-    "no-empty-blocks"
+    "no-empty-blocks",
+    "react"
   ],
   "globals": {
     "$": true,
-    "jQuery": true
+    "jQuery": true,
+    "React": true,
+    "ReactDOM": true
   },
-  "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
     "no-console": 1,
     "eqeqeq": [2, "smart"],
@@ -45,6 +51,6 @@
     "require-yield": 1,
     "babel/generator-star-spacing": 2,
     "babel/object-shorthand": 2,
-    "babel/arrow-parens": 2,
+    "babel/arrow-parens": 2
   }
 }

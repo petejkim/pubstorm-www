@@ -1,0 +1,52 @@
+html.signup
+  #signup
+    text-align: center
+
+    .signup-component
+      margin: 48px auto
+      max-width: 400px
+      background: white
+      color: black
+      padding: 24px
+      border-radius: 5px
+      box-shadow: 0 1px 0 black
+      text-align: left
+
+      .alert
+        text-align: center
+
+      input, button, .btn
+        width: 100%
+        display: block
+
+      .form-group
+        margin-bottom: 16px
+
+        &:last-of-type
+          margin-bottom: 0
+
+      .btn
+        i.fa
+          margin-right: 4px
+
+    .agreement
+      text-align: center
+      margin-bottom: 48px
+
+      a
+        color: $brandYellow
+
+        &:focus
+          color: $brandYellow
+
+        &:hover
+          color: darken($brandYellow, 5%)
+
+        &:active
+          color: darken($brandYellow, 10%)
+
+  /* Extra small devices (phones, less than 768px) */
+  @media (max-width: $screen-xs-max)
+    #signup
+      form
+        padding: 15px

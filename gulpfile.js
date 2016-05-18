@@ -29,7 +29,11 @@ var srcJS = 'src/js/app.js',
 
 gulp.task('default', sequence('clean-dev', ['js-dev', 'lint-dev', 'css-dev', 'html-dev', 'jade-dev', 'images-dev']));
 
-gulp.task('dist', sequence('clean-dist', ['images-dist', 'js-dist', 'css-dist', 'html-dist', 'jade-dist']));
+gulp.task('dist', sequence('set-env-dist', 'clean-dist', ['images-dist', 'js-dist', 'css-dist', 'html-dist', 'jade-dist']));
+
+gulp.task('set-env-dist', function() {
+  process.env.APP_ENV='dist';
+});
 
 gulp.task('lint', function() {
   return lintJS();

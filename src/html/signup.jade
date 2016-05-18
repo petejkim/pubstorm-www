@@ -1,0 +1,28 @@
+extends _layouts/default
+
+block vars
+  - var _htmlClass='signup'
+
+block title
+  | Sign Up &middot; PubStorm
+
+block body
+  include _partials/header
+
+  section#signup
+    .container
+      h2 Sign Up
+
+      #signup-app
+
+      p.agreement
+        | By creating an account, you are agreeing to the
+        =' '
+        a(href='/terms-of-service' target='_blank') Terms of Service
+        |  and the
+        =' '
+        a(href='/privacy-policy' target='_blank') Privacy Policy
+        | .
+
+  include _partials/react
+  include _partials/app_js
