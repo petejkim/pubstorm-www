@@ -36,9 +36,20 @@ block body
                 | git clone #{gitRepo}
                 | cd #{title}
                 | rm -rf .git
-                | git init .
-                | storm init .
+                | git init
+                | storm init
+                br
+                case tag
+                  when 'jekyll'
+                    | <span class="prompt">Enter Project Path:</span> _site
+                  when 'html5'
+                    | <span class="prompt">Enter Project Path:</span> .
+                  default
+                    | <span class="prompt">Enter Project Path:</span> .
+                br
                 | storm publish
+            p
+              | If you are on Windows, download Git from https://git-scm.com/download/win and run these commands in Git Bash.
 
       .flex-list
         +template('hyde.png', 'hyde', 'jekyll', 'git@github.com:poole/hyde.git',   'http://hyde-example.pubstorm.site/', 'A brazen two-column theme that pairs a prominent sidebar with uncomplicated content.')
