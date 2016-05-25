@@ -1,0 +1,56 @@
+extends _layouts/default
+
+block vars
+  - var _htmlClass='templates'
+
+block title
+  | Templates &middot; PubStorm
+
+block body
+  include _partials/header
+
+  section#templates
+    .container
+      h2 Starter Templates
+       mixin template(img, title, tag, gitRepo, demoUrl, desc, highlight)
+        .flex-item(class="#{ highlight ? 'highlight' : '' } #{tag}")
+          .template-img
+            img.img-fluid(src="images/templates/" + img, style="width:100%;")
+          .meta
+            .title-area
+              h3=title
+              .tag
+                a
+                  | #{tag}
+            p=desc
+            .actions
+              a.btn.btn-primary(role="button", data-toggle="collapse", href="#collapse-#{title}", aria-expanded="false", aria-controls="collapse-#{title}")
+                | Use this
+              a.btn.btn-default(href="#{demoUrl}", target="_blank")
+                | View Demo
+          .instructions.collapse(id="collapse-#{title}")
+            h5 Open a terminal and run:
+            pre
+              code
+                | npm install -g pubstorm
+                | git clone #{gitRepo}
+                | cd #{title}
+                | rm -rf .git
+                | git init .
+                | storm init .
+                | storm publish
+
+      .flex-list
+        +template('hyde.png', 'hyde', 'jekyll', 'git@github.com:poole/hyde.git',   'http://hyde-example.pubstorm.site/', 'A brazen two-column theme that pairs a prominent sidebar with uncomplicated content.')
+        +template('lanyon.png', 'lanyon', 'jekyll', 'git@github.com:poole/lanyon.git', 'http://lanyon-example.pubstorm.site/', 'An unassuming theme that drawer.')
+        +template('mediator.png', 'mediator', 'jekyll', 'git@github.com:dirkfabisch/mediator.git', 'http://mediator-example.pubstorm.site/', "A responsive, Medium-inspired Jekyll theme.", true)
+        +template('hyperspace.png', 'hyperspace', 'html5', 'git@github.com:PubStorm/template-hyperspace.git hyperspace', 'http://hyperspace-example.pubstorm.site/', 'A modern, reponsive website template with animations and multiple page templates.')
+        +template('photon.png', 'photon', 'html5', 'git@github.com:PubStorm/template-photon.git photon', 'http://photon-example.pubstorm.site/', 'Responsive gallery template with landing pages for each gallery item. Contact form and social items.')
+        +template('future-imperfect.png', 'future-imperfect', 'html5', 'git@github.com:PubStorm/template-future-imperfect.git future-imperfect', 'http://future-imperfect-example.pubstorm.site/', 'Responsive gallery template with landing pages for each gallery item. Contact form and social items.')
+        +template('midnight.png', 'midnight', 'jekyll', 'git@github.com:mattgraham/midnight.git', 'http://midnight-example.pubstorm.site/', 'Responsive gallery template with landing pages for each gallery item. Contact form and social items.')
+        +template('fractal.png', 'fractal', 'html5', 'git@github.com:PubStorm/template-fractal.git fractal', 'http://fractal-example.pubstorm.site/', 'A simple, single-page responsive iPhone app landing page template.', true)
+        +template('leapday.png', 'leapday', 'jekyll', 'git@github.com:mattgraham/leapday.git', 'http://leapday-example.pubstorm.site/', 'Responsive gallery template with landing pages for each gallery item. Contact form and social items.')
+        +template('kasper.png', 'kasper', 'jekyll', 'https://github.com/rosario/kasper', 'http://kasper-example.pubstorm.site/', "Ghost's default theme (Casper) on Jekyll.")
+
+  include _partials/footer
+  include _partials/app_js
