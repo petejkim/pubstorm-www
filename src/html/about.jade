@@ -1,0 +1,24 @@
+extends _layouts/default
+
+block vars
+  - var _htmlClass='about'
+
+block title
+  | About &middot; PubStorm
+
+block body
+  include _partials/header
+
+  section#about
+    .container
+      h2 About PubStorm
+      .row
+        .col-md-12
+          .page-content
+            p PubStorm is a front-end web publishing and hosting platform for static websites and single-page javascript applications.
+            p Host your personal website, blog, your company's landing pages or sophisticated frontend javascript applications.
+            p PubStorm works great with static site generators like #[a(href='http://jekyllrb.com/') Jekyll], #[a(href='https://middlemanapp.com/') Middleman] and #[a(href='https://gohugo.io/') Hugo], as well as javascript web frameworks like #[a(href='http://emberjs.com/') Ember.js], #[a(href='https://facebook.github.io/react/') React.js] and #[a(href='https://angularjs.org/') Angular.js].
+            p PubStorm is brought to you by #[a(href='https://www.nitrous.io') Nitrous] and is built in San Francisco, CA and Singapore.
+
+  include _partials/footer
+  include _partials/app_js
