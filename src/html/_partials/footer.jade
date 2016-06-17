@@ -1,13 +1,25 @@
 footer
   .container
-    h4 Nitrous PubStorm
-    ul
-      li &copy; 2016 Nitrous, Inc. All Rights Reserved.
-      li
-        a(href='/about') About
-      li
-        a(href='/terms-of-service') Terms of Service
-      li
-        a(href='/privacy-policy') Privacy Policy
-      li
-        a(href='/dmca') DMCA
+    .row
+      .col-xs-12.col-sm-3
+        h4 Nitrous PubStorm
+        ul
+          li
+            p
+              | &copy; 2016 Nitrous, Inc. All Rights Reserved.
+
+      .col-xs-12.col-sm-2
+        ul
+          li
+            h4 Company
+          li
+            a(href='/about') About
+          li
+            a(href='/terms-of-service') Terms of Service
+          li
+            a(href='/privacy-policy') Privacy Policy
+          li
+            a(href='/dmca') DMCA
+
+      .col-xs-12.col-sm-7.mailchimp
+        include mailchimp

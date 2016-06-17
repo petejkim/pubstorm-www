@@ -100,7 +100,25 @@ footer
   background: $brandBlue
   color: white
   padding-bottom: 48px
-  text-align: center
+
+  .mailchimp
+    text-align: right
+
+  #mc_embed_signup
+    margin-bottom: 5px
+    input
+      border: 1px solid rgba(255,255,255,0.0)
+      border-right: 0
+      padding: 5px 12px
+      color: rgba(0,0,0,0.3)
+      &[type="email"]
+        background: rgba(255,255,255,0.3)
+        color: #fff
+        width: 200px
+        &:focus
+          border: 1px solid rgba(255,255,255,0.5)
+      &[type="submit"]
+        background: $brandYellow
 
   h4
     color: $brandYellow
@@ -116,11 +134,11 @@ footer
     margin: 0
 
   li
-    display: inline-block
     margin: 0 8px
 
   a
     color: $brandYellow
+    cursor: pointer
 
     &:focus
       color: $brandYellow
