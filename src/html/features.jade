@@ -1,0 +1,88 @@
+extends _layouts/default
+
+block vars
+  - var _htmlClass='features'
+
+block title
+  | Features &middot; PubStorm
+
+block body
+  include _partials/header
+
+  section#features
+    .container
+      h2 Features
+      .row
+        .col-md-12
+          .page-content
+            .row
+              .col-xs-12.col-md-4
+                h4
+                  i.fa(class='fa-globe')
+                  | Production Grade CDN
+                p We serve your website from multiple points-of-presence around the globe. This means that your pages will load faster than ever. Faster websites mean happier customers who stick around longer.
+                p You don't need to do anything to use our CDN features, every new project deployed on PubStorm is served up via our lightning fast CDN out of the box.
+
+              .col-xs-12.col-md-4
+                h4
+                  i.fa(class='fa-tachometer')
+                  | Infinitely Scalable
+                p Our global CDN and infrastructure will ensure we can handle any amount of traffic without skipping a beat. So if your website gets unexpectedly popular on reddit, buzzfeed, or gets picked up by a major news network, you can rest assured that PubStorm will handle the load without breaking a sweat.
+
+              .col-xs-12.col-md-4
+                h4
+                  i.fa(class='fa-file-archive-o')
+                  | Asset Optimization
+                p We optimize your websites assets upon every deploy, doing things like minifying css and javascript and optimizing images so you can deploy new updates in seconds and your website will be blazing fast.
+
+            .row.hidden-xs
+              br
+
+            .row
+              .col-xs-12.col-md-4
+                h4
+                  i.fa(class='fa-map-signs')
+                  | Custom Domains
+                p
+                  | Adding a custom domain takes a few seconds via the command line. List your domains using the
+                  code
+                    a(href="http://help.pubstorm.com/command-reference/storm-domains/") storm domains
+                  | command. Add domains easily using the
+                  code
+                    a(href="http://help.pubstorm.com/command-reference/storm-domains-add/") storm domains add
+                  | command.
+
+              .col-xs-12.col-md-4
+                h4
+                  i.fa(class='fa-undo')
+                  | Backups &amp; Rollbacks
+                p
+                  | With PubStorm, you can publish changes to your website with the confidence that rolling back to a previous version is only a command away. Use
+                  code
+                    a(href="http://help.pubstorm.com/command-reference/storm-versions/") storm versions
+                  | to list published versions of your project and
+                  code
+                    a(href="http://help.pubstorm.com/command-reference/storm-rollback/") storm rollback [VERSION]
+                  | and specify the version you want to publish.
+
+              .col-xs-12.col-md-4
+                h4
+                  i.fa(class='fa-bar-chart')
+                  Visitor Statistics
+                p
+                  | PubStorm will send you a weekly email digest of your projects activity, including total bandwidth consumed, unique visitors, and popular pages.
+
+            .row
+              br
+
+            .row
+              .col-xs-12.col-md-6.col-md-offset-3
+                h3(style="text-align:center;margin-bottom: 16px") Paste this command in your terminal:
+                .input-group.input-group-lg
+                  span.input-group-btn
+                    button.copy-npm-cmd-btn.btn.btn-default.btn-lg(type='button' data-toggle='tooltip' data-placement='bottom' title='Copy to clipboard')
+                      i.fa.fa-clipboard
+                  input.form-control.npm-cmd(type='text' readonly=true value='npm install -g pubstorm')
+
+  include _partials/footer
+  include _partials/app_js
