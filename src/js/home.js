@@ -12,17 +12,7 @@ export default function() {
     trigger: 'hover'
   });
 
-  $('.get-started-btn').click(function() {
-    location.hash = '';
-    $('html, body').animate({
-      scrollTop: $('#get-started').offset().top
-    }, {
-      duration: 300,
-      complete() {
-        location.hash = 'get-started';
-      }
-    });
-  }).tooltip({
+  $('.get-started-btn').tooltip({
     trigger: 'hover'
   });
 
