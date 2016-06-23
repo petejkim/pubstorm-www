@@ -48,7 +48,7 @@ export default function() {
         headers: {
           Accept: env.reqAccept
         },
-        data: { email, password }
+        data: { email, password, anonymous_id: window.analytics.user().anonymousId() }
       }).then(() => {
         this.setState({
           accountCreated: true,
@@ -91,7 +91,8 @@ export default function() {
         },
         data: {
           email,
-          confirmation_code: confirmationCode
+          confirmation_code: confirmationCode,
+          anonymous_id: window.analytics.user().anonymousId()
         }
       }).then(() => {
         this.setState({
