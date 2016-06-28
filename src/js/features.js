@@ -1,4 +1,7 @@
+import doubleclick from './doubleclick';
+
 export default function() {
+  doubleclick('featu0');
   $('.npm-cmd').click(function() {
     $(this).select();
   });
