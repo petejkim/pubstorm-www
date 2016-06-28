@@ -5,4 +5,4 @@ export default function(cat) {
     <iframe src="https://5804501.fls.doubleclick.net/activityi;src=5804501;type=nitro0;cat=${cat};dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord='${a}'?"
     width="1" height="1" frameBorder="0" style="display:none;"></iframe>
   `));
-};
+}
