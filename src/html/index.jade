@@ -35,7 +35,7 @@ block body
 
         +feature('globe', 'Production Grade CDN', 'Our CDN provides quick pageloads to visitors around the globe.')
         +feature('tachometer', 'Infinitely Scalable', 'Our cloud automatically scales to handle any amount of traffic.')
-        +feature('lock', 'Free SSL Support', 'Secure your site. Setup SSL for your website in seconds.')
+        +feature('lock', 'HTTPS at Zero Cost', 'Secure your site. Setup SSL for your website in seconds, for free.')
 
         .clearfix.visible-md-block.visible-lg-block
 
@@ -156,7 +156,7 @@ block body
             |  command line tool isn&rsquo;t written in JavaScript, it is distributed as an npm
             |  package to make it really easy for you to install and update the tool.
           p
-            a(href='https://nodejs.org/en/download/') Download and install a recent version of Node.js.
+            a(href='https://nodejs.org/en/download/') Install a recent version of Node.js.
 
         li
           h3 Install PubStorm npm package
@@ -164,7 +164,7 @@ block body
             | Open a command line session and run
             =' '
             code npm install -g pubstorm
-            |  to get the PubStorm command line tool. Try running
+            |  to install the PubStorm command line tool. Try running
             =' '
             code sudo npm install -g pubstorm
             |  if you get a permission error when installing.
@@ -176,6 +176,7 @@ block body
             =' '
             code storm
             |  in the command line. To publish a web site on PubStorm, you&rsquo;ll need a
+            =' '
             a(href='/signup') PubStorm account.
           p
             | To create a PubStorm account, you can signup
@@ -221,7 +222,7 @@ block body
         li
           h3 Add a custom domain
           p
-            | After the publish command is finished, your site will be live on a
+            | After the publish command has completed, your site will be "live" on a
             =' '
             code .pubstorm.site
             |  domain.
@@ -231,10 +232,27 @@ block body
             code storm domains add
             |  and follow the instructions on the screen.
 
+        li
+          h3 Secure your site with HTTPS
+          p
+            | PubStorm can setup HTTPS on your site in seconds, at zero cost. An SSL certificate from
+            =' '
+            a(href='https://letsencrypt.org/') Let's Encrypt
+            =' '
+            | will be used.
+
+          p
+            | Run
+            =' '
+            a(href='https://help.pubstorm.com/command-reference/storm-ssl-letsencrypt/')
+              code storm ssl letsencrypt
+            =' '
+            | to set up HTTPS on your custom domain.
+
           p
             | For more information, please visit
             =' '
-            a(href='http://help.pubstorm.com') PubStorm Help
+            a(href='https://help.pubstorm.com') PubStorm Help
             | .
 
   include _partials/footer
