@@ -151,7 +151,7 @@ export default function() {
           {state.accountCreated && !state.accountConfirmed ? (
             <form onSubmit={this.handleSubmitConfirm}>
               <div className="alert alert-success" role="alert">
-                A PubStorm account for <strong>{state.accountEmail}</strong> has been created. Please confirm your account by entering the confirmation code that was sent to your email address.
+                A PubStorm account for <strong>{state.email}</strong> has been created. Please confirm your account by entering the confirmation code that was sent to your email address.
               </div>
 
               <div className="form-group">
