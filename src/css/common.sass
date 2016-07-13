@@ -3,6 +3,10 @@ body
   color: white
   background: $brandBlue
 
+p.muted
+  color: rgba(255,255,255, 0.8)
+  font-size: .9em
+
 a, .btn, input
   transition: background-color .1s, color .1s, border-color .1s, box-shadow .1s
 
@@ -101,10 +105,21 @@ footer
   color: white
   padding-bottom: 48px
 
+  a
+    i.fa
+      font-size: 18px
+      display: block
+      margin: 0 0 12px
+      color: rgba(255,255,255,0.7)
+
+    &:hover
+      text-decoration: none
+      i.fa
+        color: rgba(255,255,255,1.0)
+
   .mailchimp
     margin-top: 12px
     @media (min-width: $screen-sm-min)
-      text-align: right
       margin-top: 0
 
   #mc_embed_signup
@@ -116,7 +131,7 @@ footer
       &[type="email"]
         background: rgba(255,255,255,0.3)
         color: #fff
-        width: 177px
+        width: 160px
         &:focus
           border: 1px solid rgba(255,255,255,0.5)
       &[type="submit"]

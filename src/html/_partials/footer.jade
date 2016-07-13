@@ -1,19 +1,18 @@
 footer
   .container
     .row
-      .col-xs-12.col-sm-3
-        h4 Nitrous PubStorm
-        ul
-          li
-            p
-              | &copy; 2016 &nbsp;
-              a(href="https://www.nitrous.io") Nitrous, Inc.
-              |  All Rights Reserved.
-            p
-              a(href="https://mixpanel.com/f/partner" rel="nofollow")
-                img(src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics")
+      .col-xs-6.col-xs-6.col-md-3.mailchimp
+        h4
+          | Nitrous PubStorm
+        .hidden-xs
+          include mailchimp
 
-      .col-xs-12.col-sm-2
+        p.muted
+          | &copy; 2016 &nbsp;
+          a(href="https://www.nitrous.io") Nitrous, Inc.
+          |  All Rights Reserved.
+
+      .col-xs-3.col-sm-3.col-md-2
         ul
           li
             h4 Company
@@ -26,7 +25,7 @@ footer
           li
             a(href='/dmca') DMCA
 
-      .col-xs-12.col-sm-2
+      .col-xs-3.col-sm-3.col-md-2
         ul
           li
             h4 Learn More
@@ -37,14 +36,27 @@ footer
           li
             a(href='https://help.pubstorm.com/') Help
 
-      .col-xs-12.col-sm-2
+      .col-md-4.hidden-sm.hidden-xs
+        .map
+          img(src="images/map-t.png" style="width: 200px;float: left;margin-right: 16px;")
+
+        h4 Nitrous HQ
         ul
           li
-            h4 Connect
-          li
-            a(href='https://www.twitter.com/nitrous') Twitter
-          li
-            a(href='https://www.facebook.com/NitrousIO/') Facebook
+            p.muted(style="margin-bottom:24px;")
+              | 501 2nd St., Suite 575
+              br
+              | San Francisco, CA 94107
+            p
+              a(href="https://mixpanel.com/f/partner" rel="nofollow")
+                img(src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics")
 
-      .col-xs-12.col-sm-3.mailchimp
-        include mailchimp
+       .col-md-1.hidden-sm.hidden-xs
+         a(href="https://twitter.com/nitrous" target="_blank")
+           i.fa.fa-twitter
+
+         a(href="https://www.facebook.com/NitrousIO/" target="_blank")
+           i.fa.fa-facebook
+
+         a(href="https://www.linkedin.com/company/nitrous-io" target="_blank")
+           i.fa.fa-linkedin
