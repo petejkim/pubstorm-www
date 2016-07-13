@@ -18,8 +18,8 @@ block header_body
             i.fa.fa-clipboard
         input.form-control.npm-cmd(type='text' readonly=true value='npm install -g pubstorm')
 
-      a.button.get-started-btn.btn.btn-primary.btn-lg(href='/signup' data-toggle='tooltip' data-placement='bottom' title="It's Free!")
-        | Get Started
+      a.button.get-started-btn.btn.btn-primary.btn-lg(href='/signup' data-toggle='tooltip' data-placement='bottom' title="")
+        | Claim your free site
 
 block body
   include _partials/header
@@ -35,7 +35,7 @@ block body
 
         +feature('globe', 'Production Grade CDN', 'Our CDN provides quick pageloads to visitors around the globe.')
         +feature('tachometer', 'Infinitely Scalable', 'Our cloud automatically scales to handle any amount of traffic.')
-        +feature('lock', 'HTTPS at Zero Cost', 'Secure your site. Setup SSL for your website in seconds, for free.')
+        +feature('lock', 'HTTPS at Zero Cost', 'Secure your site. Setup a LetsEncrypt SSL cert for your website in seconds, for free.')
 
         .clearfix.visible-md-block.visible-lg-block
 
@@ -255,6 +255,7 @@ block body
             a(href='https://help.pubstorm.com') PubStorm Help
             | .
 
+  include _partials/cta_hero
   include _partials/footer
   include _partials/app_js
 
