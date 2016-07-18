@@ -131,7 +131,9 @@ footer
       &[type="email"]
         background: rgba(255,255,255,0.3)
         color: #fff
-        width: 160px
+        width: 130px
+        @media (min-width: $screen-lg-min)
+          width: 160px
         &:focus
           border: 1px solid rgba(255,255,255,0.5)
       &[type="submit"]
