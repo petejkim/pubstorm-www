@@ -191,6 +191,12 @@ footer
 @media (min-width: $screen-sm-min)
   header
     .navbar.navbar-default
+      a.login
+        color: $brandYellow
+        text-transform: uppercase
+        font-weight: 600
+        &:hover
+          color: darken($brandYellow, 5%)
       a.signup
         border: 2px solid $brandYellow
         padding: 15px 18px
