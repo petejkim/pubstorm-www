@@ -1,26 +1,44 @@
 extends _layouts/default
 
 block vars
-  - var _htmlClass='home'
+  - var _htmlClass='home signup'
   - var pageName='Home'
 
 block header_body
   main.jumbotron
     .container
-      h1
-        | Free Web Publishing
-        br.hidden-xs
-        |  and Hosting for Developers
-      p
-        | Deploy static websites to a superfast global CDN in seconds
-      .input-group.input-group-lg
-        span.input-group-btn
-          button.copy-npm-cmd-btn.btn.btn-default.btn-lg(type='button' data-toggle='tooltip' data-placement='bottom' title='Copy to clipboard')
-            i.fa.fa-clipboard
-        input.form-control.npm-cmd(type='text' readonly=true value='npm install -g pubstorm')
+      .row
+        .col-md-7.col-lg-8.left
+          h1
+            | Free Web Publishing
+            br.hidden-xs
+            |  and Hosting for Developers
+          p
+            | Deploy static websites to a superfast global CDN in seconds
+          .input-group.input-group-lg
+            span.input-group-btn
+              button.copy-npm-cmd-btn.btn.btn-default.btn-lg(type='button' data-toggle='tooltip' data-placement='bottom' title='Copy to clipboard')
+                i.fa.fa-clipboard
+            input.form-control.npm-cmd(type='text' readonly=true value='npm install -g pubstorm')
 
-      a.button.get-started-btn.btn.btn-primary.btn-lg(href='/signup' data-toggle='tooltip' data-placement='bottom' title="")
-        | Claim your free site
+          a.button.get-started-btn.btn.btn-primary.btn-lg(href='/signup' data-toggle='tooltip' data-placement='bottom' title="")
+            | Claim your free site
+
+        .hidden-xs.hidden-sm.col-md-5.col-lg-4.right
+          #signup
+            h2 Sign Up
+
+            #signup-app
+
+            p.agreement
+              | By creating an account, you are agreeing to the
+              =' '
+              a(href='/terms-of-service' target='_blank') Terms of Service
+              |  and the
+              =' '
+              a(href='/privacy-policy' target='_blank') Privacy Policy
+              | .
+
 
 block body
   include _partials/header
@@ -41,6 +59,8 @@ block body
         .clearfix.visible-md-block.visible-lg-block
 
         +feature('map-signs', 'Custom Domains', 'Have a piece of the Internet with your own domain name.')
+
+        .clearfix.visible-sm-block
         +feature('undo', 'Backups and Rollbacks', 'Made a mistake? Undo it instantly before anyone notices.')
         +feature('bar-chart', 'Visitor Statistics', 'Monitor and learn more about your website traffic.')
 
@@ -260,6 +280,7 @@ block body
 
   include _partials/cta_hero
   include _partials/footer
+  include _partials/react
   include _partials/app_js
 
 // Storm clouds photo by Carl Wycoff

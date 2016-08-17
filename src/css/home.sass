@@ -6,7 +6,6 @@ html.home
     .jumbotron
       background: transparent
       margin-bottom: 0
-      text-align: center
       color: white
 
       h1, p
@@ -15,9 +14,12 @@ html.home
       h1
         font-weight: 700
 
+      .left
+        text-align: center
+
       .input-group
-        width: 290px
         margin: 0 auto
+        width: 290px
 
       .npm-cmd
         background: #fdf6e3
@@ -379,15 +381,57 @@ html.home
     header
       .jumbotron
         h1
-          font-size: 64px
+          font-size: 56px
           margin: 48px 0
 
         p
-          font-size: 24px
+          font-size: 20px
           margin: 48px 0
 
-      .get-started-btn
-        margin-bottom: 48px
+        .left
+          text-align: left
+
+        .right
+          #signup
+            margin-top: 48px
+            background-color: $brandBlue
+            padding: 24px
+            border: 2px solid $brandYellow
+            border-radius: 4px
+            box-shadow: 0 1px 0 black
+            text-align: center
+
+            .signup-component
+              margin: 0
+              max-width: auto
+              background: none
+              color: inherit
+              padding: 0
+              border-radius: 0
+              box-shadow: none
+              text-align: center
+
+            h2
+              margin: 0 0 24px 0
+              font-size: 24px
+              text-shadow: 0 1px 0 black
+              font-weight: 700
+
+            .btn
+              display: block
+              width: 100%
+
+            p.agreement
+              font-size: 15px
+              margin: 24px 0 0 0
+
+        .input-group
+          margin: 0
+          float: left
+
+        .get-started-btn.btn
+          margin: 0 0 0 12px
+
 
     #tools
       li
@@ -420,10 +464,11 @@ html.home
     header
       .jumbotron
         h1
-          font-size: 72px
+          font-size: 62px
 
         p
           font-size: 28px
+          margin-bottom: 64px
 
     #demo
       .window
