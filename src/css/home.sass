@@ -379,6 +379,10 @@ html.home
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: $screen-md-min)
     header
+      .navbar.navbar-default
+        a.signup
+          display: none
+
       .jumbotron
         h1
           font-size: 56px
@@ -462,6 +466,10 @@ html.home
   /* Large devices (large desktops, 1200px and up) */
   @media (min-width: $screen-lg-min)
     header
+      .navbar.navbar-default
+        a.signup
+          display: none
+
       .jumbotron
         h1
           font-size: 62px
@@ -483,6 +491,11 @@ html.home
 
   /* Hi-DPI displays */
   @media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi)
+    header
+      .navbar.navbar-default
+        a.signup
+          display: none
+
     #tools
       li
         background-image: url(/images/tools.2x.png)
