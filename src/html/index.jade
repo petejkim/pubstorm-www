@@ -43,27 +43,6 @@ block header_body
 block body
   include _partials/header
 
-  section#features
-    .container
-      .row
-        mixin feature(icon, title, desc)
-          .feature.col-xs-12.col-sm-6.col-md-4
-            i.fa(class='fa-'+icon)
-            h3=title
-            p=desc
-
-        +feature('globe', 'Production Grade CDN', 'Our CDN provides quick pageloads to visitors around the globe.')
-        +feature('tachometer', 'Infinitely Scalable', 'Our cloud automatically scales to handle any amount of traffic.')
-        +feature('lock', 'HTTPS at Zero Cost', 'Secure your site. Setup a LetsEncrypt SSL cert for your website in seconds, for free.')
-
-        .clearfix.visible-md-block.visible-lg-block
-
-        +feature('map-signs', 'Custom Domains', 'Have a piece of the Internet with your own domain name.')
-
-        .clearfix.visible-sm-block
-        +feature('undo', 'Backups and Rollbacks', 'Made a mistake? Undo it instantly before anyone notices.')
-        +feature('bar-chart', 'Visitor Statistics', 'Monitor and learn more about your website traffic.')
-
   section#demo
     .container
       .terminal.window
@@ -164,6 +143,27 @@ block body
         +tool('angular', 'Angular')
         +tool('gulp', 'Gulp')
         +tool('grunt', 'Grunt')
+
+  section#features
+    .container
+      .row
+        mixin feature(icon, title, desc)
+          .feature.col-xs-12.col-sm-6.col-md-4
+            i.fa(class='fa-' + icon)
+            h3=title
+            p=desc
+
+        +feature('globe', 'Production Grade CDN', 'Our CDN provides quick pageloads to visitors around the globe.')
+        +feature('tachometer', 'Infinitely Scalable', 'Our cloud automatically scales to handle any amount of traffic.')
+        +feature('lock', 'HTTPS at Zero Cost', 'Secure your site. Setup a LetsEncrypt SSL cert for your website in seconds, for free.')
+
+        .clearfix.visible-md-block.visible-lg-block
+
+        +feature('map-signs', 'Custom Domains', 'Have a piece of the Internet with your own domain name.')
+
+        .clearfix.visible-sm-block
+        +feature('undo', 'Backups and Rollbacks', 'Made a mistake? Undo it instantly before anyone notices.')
+        +feature('bar-chart', 'Visitor Statistics', 'Monitor and learn more about your website traffic.')
 
   section#get-started
     .container
