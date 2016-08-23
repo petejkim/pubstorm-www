@@ -68,7 +68,7 @@ header
         color: darken($brandYellow, 5%)
 
     .navbar-brand
-      font-size: 22px
+      font-size: 18px
       font-weight: 700
       color: $brandYellow
       background: url(/images/logo.png) 15px center no-repeat
@@ -220,3 +220,10 @@ footer
           background-color: $brandYellow
           text-shadow: 0 1px 0 transparent
           color: $brandBlue
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min)
+  header
+    .navbar.navbar-default
+      .navbar-brand
+        font-size: 22px
