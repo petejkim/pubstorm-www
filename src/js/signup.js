@@ -58,6 +58,14 @@ export default function() {
         }, () => {
           this.refs.confirmationCodeField.focus();
         });
+
+        window.ga('send', 'event', {
+          eventCategory: 'Form Submit',
+          eventAction: 'sign-up-success',
+          eventLabel: 'create account button',
+          transport: 'beacon'
+        });
+
       }, (jqxhr) => {
         const r = jqxhr.responseJSON;
         if (jqxhr.status === 422 && typeof r === 'object' && r.error === 'invalid_params' && typeof r.errors === 'object') {
