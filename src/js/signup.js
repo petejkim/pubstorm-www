@@ -112,10 +112,10 @@ export default function() {
         });
 
         window.ga('send', 'event', {
-            eventCategory: 'Form Submit',
-            eventAction: 'sign-up-confirmation',
-            eventLabel: 'confirm account button',
-            transport: 'beacon'
+          eventCategory: 'Form Submit',
+          eventAction: 'sign-up-confirmation',
+          eventLabel: 'confirm account button',
+          transport: 'beacon'
         });
 
       }, (jqxhr) => {
