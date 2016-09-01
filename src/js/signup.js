@@ -110,6 +110,14 @@ export default function() {
         }, () => {
           this.refs.getStartedBtn.focus();
         });
+
+        window.ga('send', 'event', {
+            eventCategory: 'Form Submit',
+            eventAction: 'sign-up-confirmation',
+            eventLabel: 'confirm account button',
+            transport: 'beacon'
+        });
+
       }, (jqxhr) => {
         const r = jqxhr.responseJSON;
         if (jqxhr.status === 422 && typeof r === 'object' && r.error === 'invalid_params' && r.error_description === 'invalid email or confirmation_code') {
