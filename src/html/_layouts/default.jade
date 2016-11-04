@@ -14,5 +14,54 @@ html(class=_htmlClass)
     link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Titillium+Web:200,400,600,700,200italic,400italic,600italic,700italic|Anonymous+Pro:400')
     link(rel='stylesheet' href='/css/app.css')
   body
+    #shutdown-notice
+      .container
+        p.text-center#logo-section
+          img.logo(src="/images/logo.2x.png")
+        p
+          | The PubStorm hosting service will shutdown on November 18th, 2016.
+
+        p
+          | We are partnering with
+          =' '
+          a(href="https://www.netlify.com/" target='_blank') Netlify
+          =' '
+          | to ensure you can easily migrate and host your site on Netlify for free. Simply visit the following page and authenticate with your PubStorm credentials to get started:
+
+        p
+          a.btn.btn-warning.shutdown-btn.netlify(href="https://app.netlify.com/pubstorm" target='_blank')
+            | Migrate your site to Netlify
+
+        p
+          | The Netlify team has written up some&nbsp;
+          a(href='https://www.netlify.com/blog/2016/11/03/your-guide-to-migrate-from-pubstorm-to-netlify/' target='_blank') great documentation
+          =' '
+          | to make the migration as seamless as possible. Netlify is also providing additional support for any issues you encounter during migration. Just send an email to&nbsp;
+          a(href='mailto:support@netlify.com?subject=Pubstorm Migration') support@netlify.com
+          = ' '
+          | and include "PubStorm" in the subject header.
+
+        p
+          | To ensure no service interruptions with your projects, you
+          strong must
+          =' '
+          | migrate your site to Netlify or another hosting provider before the PubStorm service is taken offline on November 18th, 2016.
+
+        p
+          | Any paying PubStorm customers will be refunded in full within the next 30 business days via their original method of payment. You can also email
+          =' '
+          a(href='mailto:hello@pubstorm.com') hello@pubstorm.com
+          =' '
+          | with any billing related questions.
+
+        p
+          strong Keep up-to-date with future announcements
+
+        p
+          |Your subscription to the PubStorm email list will expire on November 30, 2016. If you would like to receive updates after November 30 about our open source initiatives, please click on the following button.
+
+          a.btn.btn-warning.shutdown-btn(href="http://nfx-subscribe.s3-website-us-east-1.amazonaws.com/" target='_blank')
+            | I want to receive future open-source updates
+
     block body
 // Copyright (c) 2016 PubStorm. All Rights Reserved.
